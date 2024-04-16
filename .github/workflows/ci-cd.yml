@@ -6,25 +6,25 @@ on:
             - main # Assuming you want to trigger on pushes to the main branch
 
 jobs:
-    sample-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: my-step
-              run: echo "Hello World!"
+    # sample-job:
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: my-step
+    #           run: echo "Hello World!"
 
-            - name: Checkout Code
-              uses: actions/checkout@v3
+    #         - name: Checkout Code
+    #           uses: actions/checkout@v3
 
-            - name: Install Node
-              uses: actions/setup-node@v3
-              with:
-                  node-version: 18.x
+    #         - name: Install Node
+    #           uses: actions/setup-node@v3
+    #           with:
+    #               node-version: 18.x
 
-            - name: Install dependencies
-              run: npm install
+    #         - name: Install dependencies
+    #           run: npm install
 
-            - name: Run linting
-              run: npm run lint
+    #         - name: Run linting
+    #           run: npm run lint
 
     artifacts:
         runs-on: ubuntu-latest
@@ -47,4 +47,4 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                   name: production-files
-                  path: ./dist/somewhere
+                  path: ./somewhere

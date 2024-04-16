@@ -48,3 +48,6 @@ jobs:
               with:
                   name: production-files
                   path: ./somewhere
+
+            - name: check directory
+              run: ls
